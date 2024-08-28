@@ -8,6 +8,7 @@ body.dark{
 }
 
 header {
+    font-family: Helvetica;
     text-align: center;
     padding-bottom: 10px;
     border-bottom: 1px solid darkred;

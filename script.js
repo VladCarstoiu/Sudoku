@@ -61,7 +61,9 @@ function startGame() {
   //Create board
   generateBoard(board);
   //Starts the timer
-  startTimer();
+  if(!id("time-0").checked){
+    startTimer();
+  } else id("timer").classList.add("hidden");
   //Sets theme based on input
   if (id("theme-1").checked) {
     qs("body").classList.remove("dark");
