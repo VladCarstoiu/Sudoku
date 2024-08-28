@@ -2,7 +2,7 @@
     display: none;
 }
 
-body.dark{
+.dark{
     background-color: #333333;
     color: white;
 }

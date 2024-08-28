@@ -16,6 +16,10 @@ window.onload = function () {
     .then((response) => response.json())
     .then(function (json) {
       difficulty = json;
+      //Sets theme based on input
+      id("theme").addEventListener("input", () => {
+        document.body.classList.toggle('dark');
+      })
       loading();
     })
 }
@@ -61,14 +65,11 @@ function startGame() {
   //Create board
   generateBoard(board);
   //Starts the timer
-  if(!id("time-0").checked){
-    startTimer();
-  } else id("timer").classList.add("hidden");
-  //Sets theme based on input
-  if (id("theme-1").checked) {
-    qs("body").classList.remove("dark");
+  if (id("time-0").checked) {
+    id("timer").classList.add("hidden");
   } else {
-    qs("body").classList.add("dark");
+    startTimer();
+    id("timer").classList.remove("hidden");
   }
   //Show number container
   id("number-container").classList.remove("hidden");
